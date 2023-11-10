@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package wireguard.v1;
 
+option go_package = "github.com/pentops/wireguard-config-go/wireguard/v1;wg_pb";
+
 message Server {
   PrivateKey private_key = 1;
   string cidr            = 2;
