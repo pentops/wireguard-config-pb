@@ -24,8 +24,9 @@ message Routes {
 }
 
 message User {
-  string name     = 1;
-  string public_key = 3;
+  string name       = 1;
+  string public_key = 2;
+  bool revoked      = 3;
 }
 
 message Node {
