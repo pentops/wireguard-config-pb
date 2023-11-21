@@ -6,11 +6,12 @@ option go_package = "github.com/pentops/wireguard-config-go/wireguard/v1;wg_pb";
 
 message Server {
   PrivateKey      private_key = 1;
-  string          cidr        = 2;
-  repeated string dns         = 3;
-  int64           listen_port = 4;
-  Routes          routes      = 5;
-  repeated User   users       = 6;
+  string          endpoint    = 2;
+  string          cidr        = 3;
+  repeated string dns         = 4;
+  int64           listen_port = 5;
+  Routes          routes      = 6;
+  repeated User   users       = 7;
 }
 
 message PrivateKey {
