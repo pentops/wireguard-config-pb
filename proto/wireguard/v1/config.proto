@@ -15,7 +15,7 @@ message Server {
 
 message PrivateKey {
   oneof store {
-    string aws_secret = 1;
+    string env_var = 1;
   }
 }
 
