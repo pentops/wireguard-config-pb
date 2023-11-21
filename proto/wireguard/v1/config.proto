@@ -38,10 +38,11 @@ message Interface {
   string address     = 1;
   int64  listen_port = 2;
   string private_key = 3;
-  string pre_up      = 4;
-  string post_up     = 5;
-  string pre_down    = 6;
-  string post_down   = 7;
+  string dns         = 4;
+  string pre_up      = 5;
+  string post_up     = 6;
+  string pre_down    = 7;
+  string post_down   = 8;
 }
 
 message Peer {
