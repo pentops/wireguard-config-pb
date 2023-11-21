@@ -5,12 +5,12 @@ package wireguard.v1;
 option go_package = "github.com/pentops/wireguard-config-go/wireguard/v1;wg_pb";
 
 message Server {
-  PrivateKey private_key = 1;
-  string cidr            = 2;
-  int64 listen_port      = 3;
-  Routes routes          = 4;
-
-  repeated User users = 5;
+  PrivateKey      private_key = 1;
+  string          cidr        = 2;
+  repeated string dns         = 3;
+  int64           listen_port = 4;
+  Routes          routes      = 5;
+  repeated User   users       = 6;
 }
 
 message PrivateKey {
@@ -26,7 +26,7 @@ message Routes {
 message User {
   string name       = 1;
   string public_key = 2;
-  bool revoked      = 3;
+  bool   revoked    = 3;
 }
 
 message Node {
@@ -38,8 +38,10 @@ message Interface {
   string address     = 1;
   int64  listen_port = 2;
   string private_key = 3;
-  string post_up     = 4;
-  string post_down   = 5;
+  string pre_up      = 4;
+  string post_up     = 5;
+  string pre_down    = 6;
+  string post_down   = 7;
 }
 
 message Peer {
