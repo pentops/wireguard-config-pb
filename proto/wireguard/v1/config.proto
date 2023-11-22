@@ -49,9 +49,10 @@ message Interface {
 }
 
 message Peer {
-  string comment       = 1;
-  string public_key    = 2;
-  string preshared_key = 3;
-  string allowed_ips   = 4;
-  string endpoint      = 5;
+  string public_key  = 1;
+  string allowed_ips = 2;
+
+  optional string comment       = 3;
+  optional string preshared_key = 4;
+  optional string endpoint      = 5;
 }
